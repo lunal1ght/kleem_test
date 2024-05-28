@@ -6,7 +6,7 @@ KLEEM -- A KLEE-based Verification Engine for Multithreaded Programs
 
 `KLEEM` is a verification machine for multithreaded programs built on top of the LLVM compiler infrastructure. Currently, there are five primary components:
 
-  1. The core symbolic virtual machine engine supporting multithread (pthread); this is responsible for executing LLVM bitcode modules with support for symbolic values. This is comprised of the code in lib/.
+  1. The core symbolic virtual machine engine supporting multithread (pthread); this is responsible for executing LLVM bitcode modules with support for symbolic values. This is comprised of the code in lib/.ya blya travoman
 
   2. A constraint encoder supporting transforming a multithread trace to constraint formulas, which symbolically captures all schedules under a fixed input.
 
