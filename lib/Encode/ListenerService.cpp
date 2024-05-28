@@ -198,7 +198,7 @@ void ListenerService::beforeExecuteInstruction(Executor *executor, ExecutionStat
       if (!func) {
         assert(0 && "listenerSercive execute call");
       }
-      if (func->getName().contains("llvm.dbg.declare") || func->getName().contains("llvm.dbg.label"))
+      if (func->getName().str().find("llvm.dbg.declare") != std::string::npos || func->getName().str().find("llvm.dbg.label") != std::string::npos)
         break;
       for (auto listener : bitcodeListeners) {
         state.currentStack = listener->stack[state.currentThread->threadId];
@@ -477,10 +477,10 @@ void ListenerService::afterExecuteInstruction(Executor *executor, ExecutionState
                 } else {
                   Expr::Width argWidth = bit->arguments[i]->getWidth();
                   if (argWidth > Expr::Int64) {
-                    offset = llvm::alignTo(offset, 16);
+                    offset = llvm::alignOf(offset, 16);
                   }
                   os->write(offset, bit->arguments[i]);
-                  offset += llvm::alignTo(argWidth, WordSize) / 8;
+                  offset += llvm::alignOf(argWidth, WordSize) / 8;
                 }
               }
             }
