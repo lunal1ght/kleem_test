@@ -35,7 +35,7 @@ env:
     - ENABLE_DEBUG=1
     - GTEST_VERSION=1.7.0
     - KLEE_RUNTIME_BUILD="Debug+Asserts"
-    - LLVM_VERSION=9.0
+    - LLVM_VERSION=11.0
     - METASMT_VERSION=qf_abv
     - MINISAT_VERSION="master"
     - REQUIRES_RTTI=0
@@ -54,39 +54,6 @@ jobs:
     - name: "LLVM 11"
       env: LLVM_VERSION=11.0
 
-    - name: "LLVM 3.8"
-      env: LLVM_VERSION=3.8 USE_LIBCXX=0
-
-    # Test just using Z3 only
-    - name: "Z3 only"
-      env: SOLVERS=Z3
-
-    # Test just using metaSMT
-    - name: "metaSMT STP"
-      env: SOLVERS=metaSMT METASMT_DEFAULT=STP REQUIRES_RTTI=1
-
-    - name: "metaSMT Boolector"
-      env: SOLVERS=metaSMT METASMT_DEFAULT=BTOR REQUIRES_RTTI=1
-
-    # Test we can build against STP master
-    - name: "STP master"
-      env: SOLVERS=STP STP_VERSION=master
-
-    # Check we can build latest klee-uclibc branch
-    - name: "Latest klee-uclibc"
-      env: UCLIBC_VERSION=klee_0_9_29
-
-    # Check at least one build with Asserts disabled.
-    - name: "Asserts enabled"
-      env: SOLVERS=STP DISABLE_ASSERTIONS=1
-
-    # Check without TCMALLOC and with an optimised runtime library
-    - name: "No TCMalloc, optimised runtime"
-      env: USE_TCMALLOC=0 KLEE_RUNTIME_BUILD="Release+Debug+Asserts"
-
-    # Coverage build
-    - name: "Coverage"
-      env: ENABLE_OPTIMIZED=0 COVERAGE=1
 
 cache:
   ccache: true

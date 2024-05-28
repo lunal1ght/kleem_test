@@ -973,7 +973,7 @@ z3::sort Encode::llvmTy_to_z3Ty(const Type *typ) {
 #else
       return z3_ctx.bv_sort(BIT_WIDTH);
 #endif
-    case Type::VectorTyID:
+    case Type::VectorTyIDVal:
       assert(0 && "couldn't handle Vector type!");
       break;
     default:
