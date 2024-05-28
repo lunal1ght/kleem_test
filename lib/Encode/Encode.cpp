@@ -987,7 +987,6 @@ z3::sort Encode::llvmTy_to_z3Ty(const Type *typ) {
     case Type::ScalableVectorTyID:
       assert(0 && "couldn't handle Vector type!");
       break;
-    default:
       assert(0 && "No such type!");
       break;
   }
