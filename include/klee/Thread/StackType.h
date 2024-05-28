@@ -15,7 +15,7 @@
 
 #include "klee/Module/KInstIterator.h"
 #include "klee/Thread/StackFrame.h"
-#include "../../lib/Core/AddressSpace.h"
+#include "/tmp/klee_src/lib/Core/AddressSpace.h"
 #include "klee/Module/KModule.h"
 
 namespace klee {
