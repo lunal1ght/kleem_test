@@ -9,9 +9,9 @@
 #ifndef LIB_CORE_SYMBOLICLISTENER_H_
 #define LIB_CORE_SYMBOLICLISTENER_H_
 
-#include "../../lib/Core/AddressSpace.h"
-#include "../../lib/Core/ExecutionState.h"
-#include "../../lib/Core/Executor.h"
+#include "/tmp/klee_src/lib/Core/AddressSpace.h"
+#include "/tmp/klee_src/lib/Core/ExecutionState.h"
+#include "/tmp/klee_src/lib/Core/Executor.h"
 #include "klee/ADT/Ref.h"
 #include "klee/Encode/BitcodeListener.h"
 #include "klee/Encode/Event.h"

@@ -10,8 +10,8 @@
 #ifndef BITCODELISTENER_H_
 #define BITCODELISTENER_H_
 
-#include "../../lib/Core/AddressSpace.h"
-#include "../../lib/Core/ExecutionState.h"
+#include "/tmp/klee_src/lib/Core/AddressSpace.h"
+#include "/tmp/klee_src/lib/Core/ExecutionState.h"
 #include "klee/Encode/RuntimeDataManager.h"
 #include "klee/Thread/StackType.h"
 #include "klee/Config/DebugMacro.h"

@@ -16,9 +16,9 @@
 
 #include "klee/Config/Version.h"
 
-#include "../../lib/Core/AddressSpace.h"
-#include "../../lib/Core/ExecutionState.h"
-#include "../../lib/Core/Executor.h"
+#include "/tmp/klee_src/lib/Core/AddressSpace.h"
+#include "/tmp/klee_src/lib/Core/ExecutionState.h"
+#include "/tmp/klee_src/lib/Core/Executor.h"
 #include "klee/ADT/Ref.h"
 #include "klee/Encode/BarrierInfo.h"
 #include "klee/Encode/BitcodeListener.h"

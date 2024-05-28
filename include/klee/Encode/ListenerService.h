@@ -12,7 +12,7 @@
 
 #include <vector>
 
-#include "../../lib/Core/ExecutionState.h"
+#include "/tmp/klee_src/lib/Core/ExecutionState.h"
 #include "klee/Encode/BitcodeListener.h"
 #include "klee/Encode/RuntimeDataManager.h"
 
