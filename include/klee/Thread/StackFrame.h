@@ -10,8 +10,8 @@
 #ifndef LIB_THREAD_STACKFRAME_H_
 #define LIB_THREAD_STACKFRAME_H_
 
-#include "../../lib/Core/CallPathManager.h"
-#include "../../lib/Core/Memory.h"
+#include "/tmp/klee_src/lib/Core/CallPathManager.h"
+#include "/tmp/klee_src/lib/Core/Memory.h"
 #include "klee/Module/Cell.h"
 #include "klee/Module/KInstIterator.h"
 #include "klee/Module/KModule.h"
