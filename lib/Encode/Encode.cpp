@@ -979,7 +979,6 @@ z3::sort Encode::llvmTy_to_z3Ty(const Type *typ) {
     default:
       assert(0 && "No such type!");
       break;
-  }
 #if INT_ARITHMETIC
       return z3_ctx.int_sort();
 #else
@@ -997,7 +996,8 @@ z3::sort Encode::llvmTy_to_z3Ty(const Type *typ) {
 #else
   return z3_ctx.bv_sort(BIT_WIDTH);
 #endif
-} //
+}
+ //
 
 void Encode::buildMemoryModelFormula(solver z3_solver_mm) {
 #if PRINT_FORMULA
