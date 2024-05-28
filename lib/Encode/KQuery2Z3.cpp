@@ -97,11 +97,11 @@ z3::expr KQuery2Z3::eachExprToZ3(ref<Expr> &ele) {
         // they are all real value.
         double temp = 1.0;
         if (width == 32) {
-          llvm::APFloat resValue(llvm::APFloat::IEEEsingle(), ce->getAPValue());
+          llvm::APFloat resValue(llvm::APFloat::IEEEsingle, ce->getAPValue());
 		  // the real float number,how to establish expr of z3
           temp = resValue.convertToFloat(); 
         } else if (width == 64) {
-          llvm::APFloat resValue(llvm::APFloat::IEEEdouble(), ce->getAPValue());
+          llvm::APFloat resValue(llvm::APFloat::IEEEdouble, ce->getAPValue());
 		  // the real double number.
           temp = resValue.convertToDouble(); 
         }
