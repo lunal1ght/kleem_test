@@ -973,7 +973,19 @@ z3::sort Encode::llvmTy_to_z3Ty(const Type *typ) {
 #else
       return z3_ctx.bv_sort(BIT_WIDTH);
 #endif
-    case Type::VectorTyIDVal:
+    case Type::FixedVectorTyID:
+      assert(0 && "couldn't handle Vector type!");
+      break;
+    default:
+      assert(0 && "No such type!");
+      break;
+  }
+#if INT_ARITHMETIC
+      return z3_ctx.int_sort();
+#else
+      return z3_ctx.bv_sort(BIT_WIDTH);
+#endif
+    case Type::ScalableVectorTyID:
       assert(0 && "couldn't handle Vector type!");
       break;
     default:
